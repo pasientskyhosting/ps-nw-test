@@ -18,6 +18,9 @@ RUN apt-get update && apt-get install -y -q --install-recommends --no-install-su
         gnupg2 \
         procps \
         parallel \
+        vim \
+        iputils-ping \
+        dnsutils \
     && wget https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini -O /tini \
     && chmod +x /tini \
     && curl -fsSL https://nginx.org/keys/nginx_signing.key | apt-key add - \
