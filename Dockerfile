@@ -32,6 +32,7 @@ RUN apt-get update && apt-get install -y -q --install-recommends --no-install-su
 
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY nw.sh /nw.sh
+COPY snat-race-conn-test /snat-race-conn-test
 
 ENTRYPOINT ["/tini", "--"]
 CMD ["/usr/sbin/nginx"]
